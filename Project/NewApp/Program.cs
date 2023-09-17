@@ -1,2 +1,16 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿        int a = 7;
+        long b = 18;
+        float c = 7.8F;
+        double d = 20.20;
+        decimal e = 72.1M;
+        bool f = true;
+        char g = 'C';
+        string h = "Ngo Linh Chi";
+        Console.WriteLine(a);
+        Console.WriteLine(b);
+        Console.WriteLine(c);
+        Console.WriteLine(d);
+        Console.WriteLine(e);
+        Console.WriteLine(f);
+        Console.WriteLine(g);
+        Console.WriteLine(h);
