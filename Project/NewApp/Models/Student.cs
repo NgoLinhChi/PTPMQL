@@ -9,6 +9,12 @@ namespace NewApp.Models
         public string LopSV { get; set; }
         public double DiemSV { get; set; }
 
+        public Student(){
+            TenSV = "Ngo Linh Chi";
+            MaSV = "2021050894";
+            DiemSV = 8.1;
+        }
+
     public void Nhapthongtin()
     {
         System.Console.WriteLine("Ten sinh vien:");
@@ -23,6 +29,13 @@ namespace NewApp.Models
     public void Hienthi()
     {
         System.Console.WriteLine(TenSV + "-" + MaSV + "-" + LopSV + "-" + DiemSV);
+    }
+    public void HienThi(string HoTen, string MaSV)
+    {
+        System.Console.WriteLine("Sinh vien {0} co ma sinh vien la {1}");
+    }
+    public double Diemhe4(){
+        return (DiemSV*0.4);
     }
     }
 }
