@@ -1,31 +1,26 @@
 namespace NewApp.Models
 {
-    public class Employee
+    public class Employee : Person
     {
-        public string TenNV { get; set; }
         public string MaNV { get; set; }
-        public int TuoiNV { get; set; }
         public int LuongCoBan { get; set; }
 
         public Employee(){
             MaNV = "2021050894";
-            TenNV = "Ngo Linh Chi";
         }
     
         public void Nhapthongtin()
         {
-            System.Console.WriteLine("Ten nhan vien:");
-            TenNV = Console.ReadLine();
+            base.Nhapthongtin();
             System.Console.WriteLine("Ma nhan vien:");
             MaNV = Console.ReadLine();
-            System.Console.WriteLine("Tuoi nhan vien:");
-            TuoiNV = Convert.ToInt32(Console.ReadLine());
             System.Console.WriteLine("Luong co ban: ");
             LuongCoBan = Convert.ToInt32(Console.ReadLine());
         }
         public void Hienthi()
         {
-            System.Console.WriteLine(TenNV + "-" + MaNV + "-" + TuoiNV + "-" + LuongCoBan);
+            base.HienThi();
+            System.Console.WriteLine("-" + MaNV + "-" + LuongCoBan);
         }
         public void HienThi(string TNV, int LCB)
         {

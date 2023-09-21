@@ -22,7 +22,7 @@ public class Person
         
     }
     public void HienThi(){
-        System.Console.WriteLine(HoTen + "-" + Tuoi + "-" + DiaChi);
+        System.Console.Write(HoTen + "-" + Tuoi + "-" + DiaChi);
     }
     public void HienThi(string Ten, int Tuoi){
         System.Console.WriteLine("{0} - {1} tuoi", Ten, Tuoi);
