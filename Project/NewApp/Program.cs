@@ -1,14 +1,8 @@
-﻿Console.WriteLine("Ngo Linh Chi");
-Console.WriteLine("2021050894");
-Console.WriteLine("Nhap so thu nhat");
-int a = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Nhap so thu hai");
-int b = Convert.ToInt32(Console.ReadLine());
-if (a == b) {
-    Console.WriteLine("{0} bang {1}",a,b);
-}   else {
-    if (a>b){
-    Console.WriteLine("{0} lon hon {1}",a,b);
-}   else 
-    Console.WriteLine("{0} nho hon {1}",a,b);
-}
+﻿using System.Threading.Tasks.Dataflow;
+using NewApp.Models;
+GPT PTBacNhat = new GPT();
+GPT PTBacHai = new GPT();
+string ketqua = PTBacNhat.PTBacNhat(1,2);
+System.Console.WriteLine(ketqua);
+ketqua = PTBacHai.PTBacHai(1,6,9);
+System.Console.WriteLine(ketqua);
