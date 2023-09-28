@@ -22,8 +22,15 @@ namespace NewApp.Models
     {
         System.Console.WriteLine("Sinh vien {0} co ma sinh vien la {1}");
     }
-    public double Namsinh()
+    public int Namsinh()
     {
+        System.Console.WriteLine("Nam sinh cua sinh vien la:");
+        try{
+            Tuoi = Convert.ToInt32(Console.ReadLine());
+        }
+        catch{
+            Console.WriteLine("Sai thong tin.");
+        }
         return 2023 - Tuoi;
     }
 }

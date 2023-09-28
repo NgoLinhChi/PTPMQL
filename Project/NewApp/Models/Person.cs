@@ -16,7 +16,12 @@ public class Person
         System.Console.WriteLine("Ho va ten: ");
         HoTen = Console.ReadLine();
         System.Console.WriteLine("Tuoi: ");
+        try{
         Tuoi = Convert.ToInt32(Console.ReadLine());
+        }
+        catch{
+            Tuoi = 0;
+        }
         System.Console.WriteLine("Dia chi: ");
         DiaChi = Console.ReadLine();
         

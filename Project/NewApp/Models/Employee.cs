@@ -14,8 +14,13 @@ namespace NewApp.Models
             base.Nhapthongtin();
             System.Console.WriteLine("Ma nhan vien:");
             MaNV = Console.ReadLine();
-            System.Console.WriteLine("Luong co ban: ");
-            LuongCoBan = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Luong co ban: ");
+            try{
+                LuongCoBan = Convert.ToInt32(Console.ReadLine());
+            }
+            catch{
+                LuongCoBan = 0;
+            }
         }
         public void Hienthi()
         {
