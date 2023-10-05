@@ -5,64 +5,39 @@ using NewApp.Models;
 public class Program {
     private static void Main(string[] args){
         int n;
-        System.Console.WriteLine("Nhap kich thuoc mang Person: ");
+        System.Console.WriteLine("Nhap kich thuoc danh sach: ");
         n = Convert.ToInt32(Console.ReadLine());
-        Person[] psArr = new Person[n];
-        for(int i = 0; i < psArr.Length; i++)
-        {
-            Console.WriteLine("Nhap thong tin nguoi thu {0}", i+1);
-        Person ps = new Person();
-        ps.Nhapthongtin();
-        psArr[i] = ps;
-        }
-        System.Console.WriteLine("Hien thi mang Person");
-        foreach(Person ps in psArr){
-            ps.HienThi();
-        }
-
-        System.Console.WriteLine("Nhap kich thuoc mang Student: ");
-          n = Convert.ToInt32(Console.ReadLine());
-        Student[] stdArr = new Student[n];
-        for(int i = 0; i < stdArr.Length; i++)
-        {
-            Console.WriteLine("Nhap thong tin sinh vien thu {0}", i+1);
+      ArrayList stdList = new ArrayList();
+      for(int i = 0; i < n; i++){
+        System.Console.WriteLine("Nhap thong tin sinh vien thu {0}", i+1);
         Student std = new Student();
         std.Nhapthongtin();
-        stdArr[i] = std;
+        stdList.Add(std);
         }
-        System.Console.WriteLine("Hien thi mang Student");
-        foreach(Student std in psArr){
+        System.Console.WriteLine("Hien thi danh sach");
+        foreach(Student std in stdList){
             std.HienThi();
         }
 
-        System.Console.WriteLine("Nhap kich thuoc mang Employee: ");
-          n = Convert.ToInt32(Console.ReadLine());
-        Employee[] empArr = new Employee[n];
-        for(int i = 0; i < empArr.Length; i++)
+        int indexToEdit = 0;
+        if (indexToEdit >=0 && indexToEdit < stdList.Count)
         {
-            Console.WriteLine("Nhap thong tin nhan vien thu {0}", i+1);
-        Employee emp = new Employee();
-        emp.Nhapthongtin();
-        empArr[i] = emp;
+            System.Console.WriteLine("Nhap thong tin moi cho sinh vien thu {0}", indexToEdit +1);
+            Student newStudentInfo = new Student();
+            newStudentInfo.Nhapthongtin();
+            stdList[indexToEdit] = newStudentInfo;
         }
-        System.Console.WriteLine("Hien thi mang Employee");
-        foreach(Employee emp in empArr){
-            emp.HienThi();
+        else{
+            System.Console.WriteLine("Vi tri khong hop le.");        
+        }
+        int indexToDelete =1;
+        if(indexToDelete >= 0 && indexToDelete <stdList.Count){
+            stdList.RemoveAt(indexToDelete);
+            System.Console.WriteLine("Da xoa sinh vien thu {0}", indexToDelete+1);
+        }
+        else{
+            System.Console.WriteLine("Vi tri khong hop le.");
         }
 
-        System.Console.WriteLine("Nhap kich thuoc mang Customer: ");
-          n = Convert.ToInt32(Console.ReadLine());
-        Customer[] ctmArr = new Customer[n];
-        for(int i = 0; i < ctmArr.Length; i++)
-        {
-            Console.WriteLine("Nhap thong tin khach hang thu {0}", i+1);
-        Customer ctm = new Customer();
-        ctm.Nhapthongtin();
-        ctmArr[i] = ctm;
-        }
-        System.Console.WriteLine("Hien thi mang Customer");
-        foreach(Customer ctm in ctmArr){
-            ctm.HienThi();
-        }
     }
 }
