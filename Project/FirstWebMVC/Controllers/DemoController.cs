@@ -10,20 +10,11 @@ namespace FirstWebMVC.Controllers
             return View();
         }
         [HttpPost]
-        public IActionResult Index(double HSa,double HSb)
+        public IActionResult Index(string Hoten, double hsl,int pc)
         {
-           string phuongtrinh = "Phuong trinh da nhap la: " + HSa + "x +"  + HSb + " = 0";
-           string FormResult;
-           if (HSa ==0) 
-           {
-                FormResult = "Phuong trinh vo nghiem.";
-            }
-            else
-            {
-                FormResult = "Phuong trinh co nghiem x = " + (-HSb / HSa);
-            }
-           
-            ViewBag.debai=phuongtrinh;
+           int LuongCoBan = 5000000;
+           int Luong = Convert.ToInt32( LuongCoBan * hsl + pc);
+           string FormResult ="Nhan vien " + Hoten + " co muc luong la: " + Luong;
             ViewBag.Noti = FormResult;
             return View();
         }
