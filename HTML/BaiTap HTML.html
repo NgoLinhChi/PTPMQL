@@ -2,25 +2,19 @@
 <html>
 <head>
 <style>
-table {
+table, th, td {
+  border: 1px solid beige;
   border-collapse: collapse;
-  width: 100%;
-}
-
-th, td {
-  text-align: left;
-  padding: 8px;
-}
-
-tr:nth-child(even) {
-  background-color: #D6EEEE;
 }
 </style>
 </head>
 <body>
 
-<h2>Zebra Striped Table</h2>
-<table>
+<h2>Colorgroup Table</h2>
+<table style="width: 100%">
+  <colgroup>
+    <col span="2" style="background-color: #108c8c">
+  </colgroup>
   <tr>
   <th>First Name</th>
   <th>Last Name</th>
