@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
 <body>
-  <h1>The disabled Attribute</h1>
+  <h1>The placeholder Attribute</h1>
   <h2>Ngo Linh Chi</h2>
   <h3>2021050894</h3>
   <form>
-    <label for="fname">First name:</label><br>
-    <input type="text" id="fname" name="fname" value="Chi" disabled><br>
-    <label for="lname">Last name:</label><br>
-    <input type="text" id="lname" name="lname" value="Ngo">
+    <label for="phone">Enter a phone number:</label>
+    <input type="tel" id="phone" name="phone"
+    placeholder="0-123-456-789"
+    pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}">
   </form>
 </body>
 </html>
