@@ -2,14 +2,15 @@
 <html>
 <body>
   <h2>Ngo Linh Chi</h2>
-  <p>The form target attribute</p>
+  <p>The method attribute</p>
   <p>When submitting this form, the result will be opened in a new browser tab:</p>
-  <form action="/action/page.php" target ="_blank"></form>
+  <form action="/action/page.php" target ="_blank" method="get"></form>
   <label for="fname">First name:</label><br>
   <input type="text" id="fname" name="fname" value="Chi"><br>
   <label for="lname">Last name:</label><br>
   <input type="text" id="lname" name="lname" value="Ngo"><br><br>
   <input type="submit" value="Submit">
+   <p>After you submit, notice that the form values is visible in the address bar of the new browser tab</p>
 </form>
 </body>
 </html>
