@@ -2,39 +2,25 @@
 <html>
 <head>
 <style>
-  table, th, td
-  {
- border:1px solid black;
-  }
-  table 
-  {
-  border-spacing: 50px;
-  } 
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
 </style>
 </head>
 <body>
-
-<h2>Table Cellspacing</h2>
+<h2>Table - Rowspan</h2>
 <table style="width:100%">
   <tr>
-    <th>First Name</th>
-    <th>Last Name</th>
-    <th>ID</th>
+    <th>Name</th>
+    <td>Ngo Linh Chi</td>
   </tr>
   <tr>
-    <td>Chi</td>
-    <td>Ngo</td>
+    <th rowspan="2">PersonID</th>
     <td>2021050894</td>
   </tr>
   <tr>
-    <td>B</td>
-    <td>Nguyen</td>
-    <td>0011223452</td>
-  </tr>
-  <tr>
-    <td>A</td>
-    <td>Tran</td>
-    <td>1200412563</td>
+    <td>001302008021</td>
   </tr>
 </table>
 </body>
