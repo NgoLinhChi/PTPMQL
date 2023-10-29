@@ -1,16 +1,12 @@
 <!DOCTYPE html>
 <html>
 <body>
-  <h1>Input Type Reset</h1>
+  <h1>Input Type Number</h1>
   <h2>Ngo Linh Chi</h2>
-
-  <form action="/action_page.php">
-    <label for="fname">First name:</label><br>
-    <input type="text" id="fname" name="fname" value="John"><br>
-    <label for="lname">Last name:</label><br>
-    <input type="text" id="lname" name="lname" value="Doe"><br><br>
+<form>
+    <label for="quantity">Quantity (between 1 and 5):</label>
+    <input type="number" id="quantity" name="quantity" min="1" max="5">
     <input type="submit" value="Submit">
-    <input type="reset" value="Reset">
-  </form>
+</form>
 </body>
 </html>
