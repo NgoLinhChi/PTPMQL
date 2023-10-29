@@ -1,23 +1,22 @@
 <!DOCTYPE html>
 <html>
 <body>
-  <h1>The Form Elements</h1>
+  <h2>Show a Color Picker</h2>
 
   <p>Ngo Linh Chi</p>
   
   <p>2021050894</p>
+
+
+  <p>The <strong>input type="color"</strong> is used for input fields that should contain a color.</p>
   
-  <p>The 'datalist' Element </p>
   <form action="/action_page.php">
-    <input list="browsers">
-    <datalist id="browsers">
-      <option value="Edge">
-      <option value="Firefox">
-      <option value="Chrome">
-      <option value="Opera">
-      <option value="Safari">
-    </datalist>
-    <button type="submit" name="Submit">Submit</button>
+    <label for="favcolor">Select your favorite color:</label>
+    <input type="color" id="favcolor" name="favcolor" value="#ff0000">
+    <input type="submit" value="Submit">
   </form>
+  
+  <p><b>Note:</b> type="color" is not supported in Internet Explorer 11.</p>
+  
 </body>
 </html>
