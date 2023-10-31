@@ -1,6 +1,6 @@
 namespace FirstWebMVC.Models;
-public class Employee
+public class Employee : Person
 {
-    public string EmployeeName { get; set; }
+    public string Age { get; set; }
     public string EmployeeID { get; set; }
 }
